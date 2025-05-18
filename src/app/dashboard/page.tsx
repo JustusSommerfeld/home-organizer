@@ -21,29 +21,35 @@ export default function Dashboard() {
         <button className="mt-3 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
           Edit Profile <FontAwesomeIcon icon={faPenToSquare} className="ml-1" />
         </button>
-        <div className="grid grid-cols-4 gap-6 w-full">
-          {[
-            {
-              label: "Einkaufsliste",
-              icon: <FontAwesomeIcon icon={faShoppingCart} />,
-            },
-            {
-              label: "Prospekte",
-              icon: <FontAwesomeIcon icon={faNewspaper} />,
-            },
-            { label: "Passwörter", icon: <FontAwesomeIcon icon={faKey} /> },
-            { label: "Account", icon: <FontAwesomeIcon icon={faUser} /> },
-          ].map(({ label, icon }) => (
-            <div
-              key={label}
-              className="mt-5 bg-gray-50 hover:bg-gray-100 transition rounded-xl shadow-sm p-6 flex flex-col items-center justify-center cursor-pointer"
-            >
-              <span className="text-3xl mb-2 text-gray-400">{icon}</span>
-              <span className="text-base font-medium text-gray-700">
-                {label}
-              </span>
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-4xl overflow-x-auto">
+            <div className="flex gap-6 min-w-max justify-center">
+              {[
+                {
+                  label: "Einkaufsliste",
+                  icon: <FontAwesomeIcon icon={faShoppingCart} />,
+                },
+                {
+                  label: "Prospekte",
+                  icon: <FontAwesomeIcon icon={faNewspaper} />,
+                },
+                { label: "Passwörter", icon: <FontAwesomeIcon icon={faKey} /> },
+                { label: "Account", icon: <FontAwesomeIcon icon={faUser} /> },
+              ].map(({ label, icon }) => (
+                <div
+                  key={label}
+                  className="mt-5 bg-gray-50 hover:bg-gray-100 transition rounded-xl shadow-sm p-6 flex flex-col items-center justify-center cursor-pointer min-w-[140px]"
+                >
+                  <span className="text-3xl mb-2 text-gray-400 flex justify-center w-full">
+                    {icon}
+                  </span>
+                  <span className="block w-full text-center text-base font-medium text-gray-700">
+                    {label}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
     </main>
