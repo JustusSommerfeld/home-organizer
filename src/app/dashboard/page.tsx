@@ -30,7 +30,7 @@ export default function Dashboard() {
                   icon: <FontAwesomeIcon icon={faShoppingCart} />,
                 },
                 {
-                  label: "Prospekte",
+                  label: "Aufgaben",
                   icon: <FontAwesomeIcon icon={faNewspaper} />,
                 },
                 { label: "Passwörter", icon: <FontAwesomeIcon icon={faKey} /> },
