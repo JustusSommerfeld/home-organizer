@@ -1,3 +1,4 @@
+"use client";
 import "../lib/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,51 +8,52 @@ import {
   faKey,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+
 
 export default function Dashboard() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start px-4 py-16 bg-gradient-to-br from-gray-50 to-gray-200">
-      <section className="w-full max-w bg-white rounded-2xl shadow-lg p-10 flex flex-col items-center">
-        <img
-          src="/profile.jpg"
-          alt="Profile Picture"
-          className="w-20 h-20 rounded-full border-4 border-gray-200 shadow mb-4"
-        />
-        <h1 className="text-4xl font-bold text-gray-800 mb-1">Dashboard</h1>
-        <button className="mt-3 px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
-          Edit Profile <FontAwesomeIcon icon={faPenToSquare} className="ml-1" />
-        </button>
-        <div className="w-full flex justify-center">
-          <div className="w-full max-w-4xl overflow-x-auto">
-            <div className="flex gap-6 min-w-max justify-center">
-              {[
-                {
-                  label: "Einkaufsliste",
-                  icon: <FontAwesomeIcon icon={faShoppingCart} />,
-                },
-                {
-                  label: "Aufgaben",
-                  icon: <FontAwesomeIcon icon={faNewspaper} />,
-                },
-                { label: "Passwörter", icon: <FontAwesomeIcon icon={faKey} /> },
-                { label: "Account", icon: <FontAwesomeIcon icon={faUser} /> },
-              ].map(({ label, icon }) => (
-                <div
-                  key={label}
-                  className="mt-5 bg-gray-50 hover:bg-gray-100 transition rounded-xl shadow-sm p-6 flex flex-col items-center justify-center cursor-pointer min-w-[140px]"
-                >
-                  <span className="text-3xl mb-2 text-gray-400 flex justify-center w-full">
-                    {icon}
-                  </span>
-                  <span className="block w-full text-center text-base font-medium text-gray-700">
-                    {label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+    <div className="flex min-h-screen bg-gray-50">
+      {/* Sidebar */}
+      <nav className="w-64 bg-white shadow-md flex flex-col py-8 px-4">
+      <h1 className="text-3xl font-bold mb-10 text-center">Dashboard</h1>
+      <ul className="space-y-4">
+        <li>
+        <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
+          <FontAwesomeIcon icon={faPenToSquare} size="lg" />
+          <span className="text-gray-400 text-lg font-medium">Notes</span>
         </div>
-      </section>
-    </main>
+        </li>
+        <li>
+        <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
+          <FontAwesomeIcon icon={faShoppingCart} size="lg" />
+          <span className="text-gray-400 text-lg font-medium">Shopping List</span>
+        </div>
+        </li>
+        <li>
+        <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
+          <FontAwesomeIcon icon={faNewspaper} size="lg" />
+          <span className="text-gray-400 text-lg font-medium">News</span>
+        </div>
+        </li>
+        <li>
+        <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
+          <FontAwesomeIcon icon={faKey} size="lg" />
+          <span className="text-gray-400 text-lg font-medium">Password Manager</span>
+        </div>
+        </li>
+        <li>
+        <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
+          <FontAwesomeIcon icon={faUser} size="lg" />
+          <span className="text-gray-400 text-lg font-medium">Profile</span>
+        </div>
+        </li>
+      </ul>
+      </nav>
+      {/* Main Content */}
+      <main className="flex-1 flex items-center justify-center">
+      <div className="text-gray-400 text-2xl">Select a section from the sidebar</div>
+      </main>
+    </div>
   );
 }
