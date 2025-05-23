@@ -9,11 +9,11 @@
 
 ## ✨ Features
 
-- 📝 **Notes:** Keep track of your thoughts and todos.
-- 🛒 **Shopping List:** Organize your groceries and essentials.
-- 📰 **News:** Stay updated with relevant information.
-- 🔑 **Password Manager:** Securely store your passwords.
-- 👤 **Profile:** Manage your personal information.
+- 📅 **Calendar:** View and organize your schedule and upcoming events.
+- 🛒 **Shopping List:** Create and manage your shopping list.
+- 🔔 **Reminder:** Set reminders and manage todos in one place.
+- 🔑 **Password Manager:** Securely store and autofill your passwords.
+- 👤 **Profile:** Update your personal details and preferences.
 
 ---
 
