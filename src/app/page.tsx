@@ -32,9 +32,18 @@ export default function Home() {
       {screen === "home" && (
         <button
           className="mt-4 px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 transition"
-          onClick={() => window.location.href = "/dashboard"}
+          onClick={() => (window.location.href = "/dashboard")}
         >
           Test dashboard
+        </button>
+      )}
+
+      {screen === "home" && (
+        <button
+          className="mt-4 px-6 py-3 bg-[#278783] text-white rounded-xl hover:bg-[#206c68] transition"
+          onClick={() => (window.location.href = "/team")}
+        >
+          Team
         </button>
       )}
 
