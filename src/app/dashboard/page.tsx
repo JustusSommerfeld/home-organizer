@@ -7,6 +7,8 @@ import {
   faNewspaper,
   faKey,
   faUser,
+  faCalendar,
+  faBell
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Image from "next/image";
@@ -27,8 +29,8 @@ export default function Dashboard() {
         <ul className="space-y-4">
           <li>
             <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
-              <FontAwesomeIcon icon={faPenToSquare} size="lg" />
-              <span className="text-gray-400 text-lg font-medium">Notes</span>
+              <FontAwesomeIcon icon={faCalendar} size="lg" />
+              <span className="text-gray-400 text-lg font-medium">Calendar</span>
             </div>
           </li>
           <li>
@@ -41,8 +43,8 @@ export default function Dashboard() {
           </li>
           <li>
             <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-100 cursor-pointer transition text-gray-300">
-              <FontAwesomeIcon icon={faNewspaper} size="lg" />
-              <span className="text-gray-400 text-lg font-medium">News</span>
+              <FontAwesomeIcon icon={faBell} size="lg" />
+              <span className="text-gray-400 text-lg font-medium">Reminder</span>
             </div>
           </li>
           <li>
